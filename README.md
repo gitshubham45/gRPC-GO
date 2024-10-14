@@ -33,26 +33,26 @@ The project uses a Protocol Buffers definition file (`greet.proto`) to define th
 
 Clone the project repository to your local machine:
 
-\`\`\`bash
+
 git clone https://github.com/yourusername/gRPC-GO.git
 cd gRPC-GO
-\`\`\`
+
 
 ### 2. Install Dependencies
 
 Run the following command to download the required dependencies:
 
-\`\`\`bash
+
 go mod tidy
-\`\`\`
+
 
 ### 3. Compiling the Proto File
 
 To generate the gRPC code from the \`greet.proto\` file, use the following command:
 
-\`\`\`bash
+
 protoc --go_out=. --go-grpc_out=. proto/greet.proto
-\`\`\`
+
 
 Make sure the \`protoc\` compiler and the plugins \`protoc-gen-go\` and \`protoc-gen-go-grpc\` are installed and available in your system's \`$PATH\`.
 
@@ -60,15 +60,12 @@ Make sure the \`protoc\` compiler and the plugins \`protoc-gen-go\` and \`protoc
 
 1. **Navigate to the Server Directory:**
 
-   \`\`\`bash
    cd server
-   \`\`\`
 
 2. **Start the gRPC Server:**
 
-   \`\`\`bash
    go run *.go
-   \`\`\`
+
 
    This command will start the server, listening for incoming gRPC requests.
 
@@ -78,35 +75,10 @@ Make sure the \`protoc\` compiler and the plugins \`protoc-gen-go\` and \`protoc
 
    Open a new terminal window and navigate to the client directory:
 
-   \`\`\`bash
+  
    cd client
-   \`\`\`
+
 
 2. **Run the Client:**
 
-   Use the following commands to run the client with different communication types:
-
-   - **Unary RPC:**
-
-     \`\`\`bash
-     go run *.go 
-     \`\`\`
-
-   - **Server-side Streaming RPC:**
-
-     \`\`\`bash
-     go run *.go 
-     \`\`\`
-
-   - **Client-side Streaming RPC:**
-
-     \`\`\`bash
-     go run *.go 
-     \`\`\`
-
-   - **Bidirectional Streaming RPC:**
-
-     \`\`\`bash
-     go run *.go 
-     \`\`\`
-
+   go run *.go
